@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Playground</title>
+  </head>
+  <body>
+    <form action="/">
+      <p>言語</p>
+      <select name="language">
+        <option value="ruby">Ruby</option>
+        <option value="rust">Rust</option>
+      </select>
+      <p>コード</p>
+      <textarea required name="code" rows="10" cols="70"></textarea>
+      <input type="submit" value="実行" />
+    </form>
+    <div>
+      {% if exit_code == 0 %}
+      <dev>
+        <code>{{ result }}</code>
+      </dev>
+      {% else %}
+      <dev>
+        <code style="color: brown">{{ result }}</code>
+      </dev>
+      {% endif %}
+    </div>
+  </body>
+</html>

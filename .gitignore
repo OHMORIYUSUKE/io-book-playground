@@ -1,0 +1,2 @@
+/server/app/share/*
+!server/app/share/.gitkeep
